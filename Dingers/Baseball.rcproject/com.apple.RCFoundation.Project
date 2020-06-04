@@ -17,7 +17,6 @@
                 -2.2040188312530518,
                 0
               ],
-              "hasGroundPlane" : true,
               "identifier" : "DAECDC7F-44D7-406F-951F-299A68DC4DE2",
               "material" : "concrete",
               "overrides" : {
@@ -83,10 +82,38 @@
                           }
                         ],
                         [
-                          "entityName",
+                          "accessibilityLabel",
                           {
                             "typeName" : "String",
                             "value" : "bat"
+                          }
+                        ],
+                        [
+                          "entityName",
+                          {
+                            "typeName" : "String",
+                            "value" : "dingerBat"
+                          }
+                        ],
+                        [
+                          "isAccessibilityEnabled",
+                          {
+                            "typeName" : "Bool",
+                            "value" : true
+                          }
+                        ],
+                        [
+                          "rigidBody-enabled",
+                          {
+                            "typeName" : "Bool",
+                            "value" : true
+                          }
+                        ],
+                        [
+                          "rigidBody-motionType",
+                          {
+                            "typeName" : "REMotionType",
+                            "value" : "dynamic"
                           }
                         ]
                       ]
@@ -173,10 +200,24 @@
                           }
                         ],
                         [
+                          "accessibilityLabel",
+                          {
+                            "typeName" : "String",
+                            "value" : "baseball"
+                          }
+                        ],
+                        [
                           "entityName",
                           {
                             "typeName" : "String",
                             "value" : "baseball"
+                          }
+                        ],
+                        [
+                          "isAccessibilityEnabled",
+                          {
+                            "typeName" : "Bool",
+                            "value" : true
                           }
                         ],
                         [
@@ -187,27 +228,39 @@
                           }
                         ],
                         [
+                          "rigidBody-material",
+                          {
+                            "typeName" : "RigidBodyMaterial",
+                            "value" : {
+                              "builtIn" : "wood",
+                              "overrides" : {
+
+                              }
+                            }
+                          }
+                        ],
+                        [
                           "rigidBody-motionType",
                           {
                             "typeName" : "REMotionType",
-                            "value" : "static"
+                            "value" : "dynamic"
                           }
                         ]
                       ]
                     },
                     "transform" : {
                       "matrix" : [
-                        1,
+                        0.710396409034729,
                         0,
                         0,
                         0,
                         0,
-                        1,
+                        0.710396409034729,
                         0,
                         0,
                         0,
                         0,
-                        1,
+                        0.710396409034729,
                         0,
                         -9.5367431640625e-07,
                         0.58626234531402588,
@@ -223,21 +276,21 @@
                           "bevelRadius",
                           {
                             "typeName" : "Double",
-                            "value" : 0.003211662098425007
+                            "value" : 0.0036776014726678267
                           }
                         ],
                         [
                           "diameter",
                           {
                             "typeName" : "Double",
-                            "value" : 0.14269794692927312
+                            "value" : 0.32833500129670073
                           }
                         ],
                         [
                           "height",
                           {
                             "typeName" : "Double",
-                            "value" : 0.012663136980218832
+                            "value" : 0.0079958855797746427
                           }
                         ],
                         [
@@ -245,6 +298,18 @@
                           {
                             "typeName" : "String",
                             "value" : "paintEnamelMatte"
+                          }
+                        ],
+                        [
+                          "materialColor",
+                          {
+                            "typeName" : "double4",
+                            "value" : [
+                              1,
+                              1,
+                              0.86666667461395264,
+                              1
+                            ]
                           }
                         ],
                         [
@@ -268,10 +333,31 @@
                           }
                         ],
                         [
+                          "accessibilityLabel",
+                          {
+                            "typeName" : "String",
+                            "value" : "home base"
+                          }
+                        ],
+                        [
                           "entityName",
                           {
                             "typeName" : "String",
-                            "value" : "base"
+                            "value" : "homeBase"
+                          }
+                        ],
+                        [
+                          "isAccessibilityEnabled",
+                          {
+                            "typeName" : "Bool",
+                            "value" : true
+                          }
+                        ],
+                        [
+                          "rigidBody-enabled",
+                          {
+                            "typeName" : "Bool",
+                            "value" : true
                           }
                         ]
                       ]
@@ -290,9 +376,9 @@
                         0,
                         0.99999982118606567,
                         0,
-                        0.0045056939125061035,
-                        0.0063315723091363907,
-                        -0.00098337512463331223,
+                        0,
+                        0,
+                        0,
                         1
                       ]
                     }
@@ -300,26 +386,36 @@
                   "Cube" : null,
                   "Plate" : null
                 },
-                "factory" : null
+                "factory" : null,
+                "runtimeAttributes" : [
+                  [
+                    "isAccessibilityEnabled",
+                    {
+                      "typeName" : "Bool",
+                      "value" : false
+                    }
+                  ]
+                ]
               },
+              "physicsMode" : "grid",
               "title" : "Scene",
               "viewTransform" : {
                 "cameraTransform" : [
-                  1,
+                  0.70052880048751831,
+                  -6.7055218266887096e-08,
+                  0.71362400054931641,
                   0,
+                  0.59985584020614624,
+                  0.54169219732284546,
+                  -0.58884847164154053,
                   0,
+                  -0.38656452298164368,
+                  0.84057682752609253,
+                  0.37947118282318115,
                   0,
-                  0,
-                  1,
-                  0,
-                  0,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                  0,
-                  0,
+                  -0.42346185445785522,
+                  1.1847966909408569,
+                  0.54942363500595093,
                   1
                 ],
                 "sceneTransform" : [
@@ -343,7 +439,7 @@
               }
             }
           ],
-          "__version" : 4
+          "__version" : 5
         }
       ],
       "tags" : {
