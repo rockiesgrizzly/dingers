@@ -25,19 +25,28 @@
                                 <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="awv-d7-HJX" customClass="ARCoachingOverlayView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="69P-W8-CmI" firstAttribute="bottom" secondItem="tYi-v6-bKh" secondAttribute="bottom" constant="56" id="5bz-EG-8Gv"/>
+                            <constraint firstItem="awv-d7-HJX" firstAttribute="leading" secondItem="69P-W8-CmI" secondAttribute="leading" id="Ecs-qh-UbA"/>
                             <constraint firstItem="tYi-v6-bKh" firstAttribute="centerX" secondItem="69P-W8-CmI" secondAttribute="centerX" id="KCX-Pn-scb"/>
                             <constraint firstItem="Dot-0r-acI" firstAttribute="leading" secondItem="69P-W8-CmI" secondAttribute="leading" id="ckl-YK-G9f"/>
                             <constraint firstItem="Dot-0r-acI" firstAttribute="top" secondItem="8c4-OR-qiO" secondAttribute="top" id="fF5-9q-SGP"/>
+                            <constraint firstItem="awv-d7-HJX" firstAttribute="trailing" secondItem="69P-W8-CmI" secondAttribute="trailing" id="pRX-So-G1v"/>
                             <constraint firstAttribute="bottom" secondItem="Dot-0r-acI" secondAttribute="bottom" id="pco-Lt-jsv"/>
+                            <constraint firstItem="awv-d7-HJX" firstAttribute="top" secondItem="8c4-OR-qiO" secondAttribute="top" id="slx-2W-PEP"/>
+                            <constraint firstAttribute="bottom" secondItem="awv-d7-HJX" secondAttribute="bottom" id="won-JY-1DO"/>
                             <constraint firstItem="Dot-0r-acI" firstAttribute="trailing" secondItem="69P-W8-CmI" secondAttribute="trailing" id="yLJ-2A-AgY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="69P-W8-CmI"/>
                     </view>
                     <connections>
+                        <outlet property="coachingOverlayView" destination="awv-d7-HJX" id="CCY-Jb-6dZ"/>
                         <outlet property="deviceArView" destination="Dot-0r-acI" id="bXn-qh-qB8"/>
                         <outlet property="startLabel" destination="tYi-v6-bKh" id="qmh-k9-bdR"/>
                     </connections>

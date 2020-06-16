@@ -26,13 +26,14 @@ class DeviceViewController: UIViewController {
     //var deviceFoundSurface = false
     var gameStarted = false
     
-    var coachingOverlayView: ARCoachingOverlayView?
-    
     // MARK: - IBOutlets
     /// root AR view
     @IBOutlet var deviceArView: ARView!
     
     @IBOutlet weak var startLabel: UILabel!
+    @IBOutlet weak var coachingOverlayView: ARCoachingOverlayView!
+    
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,8 @@ class DeviceViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
          if cameraUsageIsEnabled() {
             // need to allow time upon first usage
              showCoachingOverlayView()
@@ -71,14 +74,11 @@ class DeviceViewController: UIViewController {
     private func configureSession() {
         let arTrackingConfig = ARWorldTrackingConfiguration()
         arTrackingConfig.planeDetection = .horizontal
-        setupArViewDebugOptions()
-        
-        deviceArView.session.run(arTrackingConfig)
-    }
-    
-    private func setupArViewDebugOptions() {
         deviceArView.debugOptions = [.showFeaturePoints,
-                                     .showWorldOrigin]
+        .showWorldOrigin]
+        
+        deviceArView.session.delegate = self
+        deviceArView.session.run(arTrackingConfig)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -124,5 +124,3 @@ class DeviceViewController: UIViewController {
     }
     
 }
-
-
