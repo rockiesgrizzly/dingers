@@ -17,6 +17,7 @@
 		433A21BF2489707F00C0F3E1 /* DeviceVC+CoachingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433A21BE2489707F00C0F3E1 /* DeviceVC+CoachingOverlay.swift */; };
 		43558408246C8870003693B2 /* Baseball.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 43558407246C8870003693B2 /* Baseball.rcproject */; };
 		439788512499364C0023F666 /* Baseball+GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439788502499364C0023F666 /* Baseball+GameController.swift */; };
+		43978853249ACAFF0023F666 /* DeviceVC+BaseballGameControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43978852249ACAFF0023F666 /* DeviceVC+BaseballGameControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		433A21BE2489707F00C0F3E1 /* DeviceVC+CoachingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceVC+CoachingOverlay.swift"; sourceTree = "<group>"; };
 		43558407246C8870003693B2 /* Baseball.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Baseball.rcproject; sourceTree = "<group>"; };
 		439788502499364C0023F666 /* Baseball+GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Baseball+GameController.swift"; sourceTree = "<group>"; };
+		43978852249ACAFF0023F666 /* DeviceVC+BaseballGameControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceVC+BaseballGameControllerDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			children = (
 				4337364A2410A178008332F0 /* AppDelegate.swift */,
 				4337364C2410A178008332F0 /* DeviceViewController.swift */,
+				43978852249ACAFF0023F666 /* DeviceVC+BaseballGameControllerDelegate.swift */,
 				433A21BE2489707F00C0F3E1 /* DeviceVC+CoachingOverlay.swift */,
 				439788502499364C0023F666 /* Baseball+GameController.swift */,
 			);
@@ -282,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43558408246C8870003693B2 /* Baseball.rcproject in Sources */,
+				43978853249ACAFF0023F666 /* DeviceVC+BaseballGameControllerDelegate.swift in Sources */,
 				439788512499364C0023F666 /* Baseball+GameController.swift in Sources */,
 				4337364D2410A178008332F0 /* DeviceViewController.swift in Sources */,
 				4337364B2410A178008332F0 /* AppDelegate.swift in Sources */,

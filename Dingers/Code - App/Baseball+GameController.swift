@@ -60,17 +60,51 @@ extension Baseball {
         }
         
         // MARK: - Lifecycle
-        init(with delegate: BaseballGameControllerDelegate) {
+        init(withDelegate delegate: BaseballGameControllerDelegate) {
             self.delegate = delegate
         }
         
         // MARK: - GameState Handling
-        func initialize() {
+        func beginStateTransitions() {
             transition(to: .startingArSetup)
         }
         
         private func transition(to gameState: GameState) {
+            guard gameState != currentGameState else { return }
             
+            switch gameState {
+            case .startingArSetup: transitionToInitialArSetup()
+            case .placingContent: transitionToPlacingContent()
+            default: print("fell through")
+            }
         }
+        
+        private func transitionToInitialArSetup() {
+            Baseball.loadSceneAsync { [weak self] loadResult in
+                switch loadResult {
+                case .success(let scene):
+                    self?.handleSuccessfulLoad(of: scene)
+                case .failure(let error):
+                    print("Error during Initial AR Setup:" + error.localizedDescription)
+                }
+            }
+        }
+        
+        
+        private func handleSuccessfulLoad(of baseballScene: Baseball.Scene) {
+            if baseballSceneAnchor == nil {
+                baseballSceneAnchor = baseballScene
+                delegate?.gameContentIsLoaded(for: self)
+            }
+            
+            if case let .waitingForContent(nextState) = currentGameState {
+                transition(to: nextState)
+            }
+        }
+        
+        private func transitionToPlacingContent() {
+            delegate?.gameIsReadyForContentPlacement(in: self)
+        }
+        
     }
 }
